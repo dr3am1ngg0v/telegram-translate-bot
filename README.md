@@ -32,6 +32,11 @@ cd ./telegram-translate-bot
 venv\bin\Activate
 ```
 
+Если нет желания активировать *venv*, то просто устанавливаем библиотеки:
+```bash
+pip install -r requirements.txt
+```
+
 И запускаем бота:
 ```bash
 python main.py
