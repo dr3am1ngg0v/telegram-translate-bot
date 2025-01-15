@@ -1,9 +1,12 @@
-import telebot
+import telebot, os
+from dotenv import load_dotenv
 from googletrans import Translator
 from langdetect import detect
 
+load_dotenv()
+
 translator = Translator()
-bot = telebot.TeleBot("7533179279:AAEnTFdF4IPX1GwbomBmEs_gG2qs87sN5pc")
+bot = telebot.TeleBot(os.getenv("TG_TOKEN"))
 
 @bot.message_handler(func=lambda m: True)
 def translate_message(message):
